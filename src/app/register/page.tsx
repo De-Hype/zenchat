@@ -1,5 +1,6 @@
 type Props = {}
 const page = (props: Props) => {
+    useS
     const HandleRegister=(e)=>{
         e.preventDefault()
     }
