@@ -4,7 +4,7 @@ import {IoMdNotifications, IoMdSettings } from "react-icons/io";
 const Header = () => {
   return (
     <div className="flex justify-between items-center">
-        <SiZendesk className="text-xl" />
+        <SiZendesk className="text-3xl" />
         <div className="">
           <FaUserFriends className="" />
           <IoMdNotifications className="" />
