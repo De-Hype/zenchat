@@ -4,7 +4,10 @@ import {  IoMdSettings } from "react-icons/io";
 import { BsChatSquareQuoteFill } from "react-icons/bs";
 import { IoCall } from "react-icons/io5";
 import Link from "next/link";
-const Header = () => {
+
+type Props = {};
+
+const Header = (props:Props) => {
   return (
     <div className="flex justify-between items-center py-2 px-4 border-b">
       <SiZendesk className="text-5xl cursor-pointer" />

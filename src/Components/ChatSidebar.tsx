@@ -1,7 +1,9 @@
 
 const ChatSidebar = () => {
   return (
-    <div>ChatSidebar</div>
+    <section className="w-3/4 border" >
+
+    </section>
   )
 }
 
