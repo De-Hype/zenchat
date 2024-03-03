@@ -36,7 +36,7 @@ const page = (props: Props) => {
             type="submit"
             value="Log In"
             className="cursor-pointer text-sm outline-none py-2 text-white bg-blue-500 transition hover:bg-blue-300 rounded-xl"
-            onClick={(e:any) => HandleLogin(e)}
+            onClick={(e: any) => HandleLogin(e)}
           />
         </form>
         <div className="flex gap-3 pt-5 flex-col w-full">
@@ -54,7 +54,7 @@ const page = (props: Props) => {
           </button>
         </div>
         <h3 className="">
-          <span>Don't have an account?</span>{" "}
+          <span>Don't have an account?</span>
           <Link
             className="text-blue-500 transition hover:text-red-500"
             href="/register"

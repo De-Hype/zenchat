@@ -1,3 +1,4 @@
+import Features from "@/Components/Features";
 import Footer from "@/Components/Footer";
 import Hero from "@/Components/Hero";
 import NotUserHeader from "@/Components/NonUserHeader";
@@ -8,6 +9,7 @@ export default function Home() {
     <main className="min-h-screen">
       <NotUserHeader />
       <Hero />
+      <Features />
       <Footer />
     </main>
   );
