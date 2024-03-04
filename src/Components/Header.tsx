@@ -32,7 +32,7 @@ const Header = (props:Props) => {
         </Link>
         <Link
           className="text-black transition hover:text-blue-700"
-          href="/friend-request"
+          href="/profile"
         >
           <IoMdSettings className="text-2xl" />
         </Link>
