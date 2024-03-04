@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client"
+
 import unknownUser from "@/assets/unknownUser.jpeg";
+import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
 import { FaPlus } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
@@ -9,7 +11,7 @@ import { SlOptionsVertical } from "react-icons/sl";
 type Props = {};
 const ChatSidebar = (props: Props) => {
   return (
-    <section className="w-3/4 h-full">
+    <section className="w-3/4 h-full flex flex-col gap-2">
       <aside className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Image
@@ -25,18 +27,18 @@ const ChatSidebar = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="" >
-        <IoCall className="text-2xl font-bold cursor-pointer" />
-        <SlOptionsVertical className="text-2xl font-bold cursor-pointer" />
+        <div className="flex items-center gap-6">
+          <IoCall className="text-2xl font-bold cursor-pointer transition hover:text-blue-700" />
+          <SlOptionsVertical className="text-2xl font-bold cursor-pointer transition hover:text-blue-700" />
         </div>
       </aside>
-      <aside className="h-full"></aside>
+      <aside className="h-2/3 overflow-y-auto bg-blue-400"></aside>
       <aside className="self-end relative px-4 shadow-sm py-3 w-full border flex items-center rounded-2xl">
         <span className=" cursor-pointer absolute transition hover:bg-white hover:border  hover:border-blue-600 rounded-full px-3 py-3 left-2 bg-blue-700">
           <FaPlus className="text-white transition hover:text-blue-700" />
         </span>
         <textarea
-          className="w-full text-sm px-11 py-1 min-h-20 outline-none resize-none"
+          className="w-full font-semibold text-sm px-11 py-1 min-h-20 outline-none resize-none"
           name=""
           id=""
           placeholder="Send message..."
