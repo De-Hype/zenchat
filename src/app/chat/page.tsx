@@ -1,4 +1,5 @@
 import ChatSidebar from "@/Components/ChatSidebar"
+import Footer from "@/Components/Footer"
 import Header from "@/Components/Header"
 import UserSideBar from "@/Components/UserSideBar"
 
@@ -6,12 +7,13 @@ type Props = {}
 const page = (props: Props) => {
     
   return (
-    <div className="min-h-screen">
+    <div className="h-screen">
         <Header />
-        <section className="py-2 px-4 flex items-center gap-3">
+        <section className="h-3/4 border my-3 py-2 px-4 flex items-center gap-3">
           <UserSideBar />
           <ChatSidebar />
         </section>
+        <Footer />
     </div>
   )
 }

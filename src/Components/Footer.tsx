@@ -4,7 +4,7 @@ import Link from "next/link";
 type Props = {};
 const Footer = (props: Props) => {
   return (
-    <section>
+    <section className="border-t">
       <h3 className="text-center">
           <span>Created by </span>
           <Link

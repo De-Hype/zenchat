@@ -1,44 +1,172 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
+import unknownUser from "@/assets/unknownUser.jpeg";
 import { FaSearch } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 
 type Props = {};
 
-const UserSideBar = (props:Props) => {
-    const [search, setSearch] = useState("");
+const UserSideBar = (props: Props) => {
+  const [search, setSearch] = useState("");
 
-    //Search components
-    //Messaged user components
-    //For the messaged user, it will have this =>
-    //image, {username, message}, activestatus
-    // <Image src={} alt="A profile image of the zenchat chat application user, David Hype ." />
-    const handleFriendSearch =(e:any)=>{
-        e.preventDefault();
-        console.log(search);
-    }
+  //Search components
+  //Messaged user components
+  //For the messaged user, it will have this =>
+  //image, {username, message}, activestatus
+  const handleFriendSearch = (e: any) => {
+    e.preventDefault();
+    console.log(search);
+  };
   return (
-    <section className="border flex flex-col gap-3 px-3 w-1/4 py-2">
-        <form onSubmit={handleFriendSearch} className="border bg-red-300 relative flex items-center">
-            <input onChange={(e:any)=>setSearch(e.target.value)} type="text" name="search" id="search" placeholder="Search friend..." className="px-3 w-full py-2 outline-none text-sm" />
-            <FaSearch className="absolute" />
-        </form>
-        <aside className="">
-            <div className="flex items-center justify-between py-2">
-                <div className="">
-                    <h3 className="font-bolder" >David Hype</h3>
-                    <p className="text-sm font-" >This is the last message sent.</p>
-                </div>
-                <div className="">
-                    <GoDotFill className="text-green-500" />
-                    <p className="font-light text-xs" >10:40 AM</p>
-                </div>
+    <section className="h-full overflow-y-auto border self-start flex flex-col gap-3 px-3 w-1/4 py-2 shadow">
+      <form
+        onSubmit={handleFriendSearch}
+        className="border py-1 px-2 rounded relative flex items-center"
+      >
+        <input
+          onChange={(e: any) => setSearch(e.target.value)}
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search friend..."
+          className="pl-3 pr-8 w-full py-2 outline-none text-sm"
+        />
+        <FaSearch className="absolute right-3" />
+      </form>
+      <aside className="">
+        <div className="flex items-center justify-between transition px-2 cursor-pointer py-2 border-b hover:bg-slate-200">
+          <div className="flex items-center gap-1">
+            <Image
+              className="rounded-full h-14 w-14"
+              src={unknownUser}
+              alt="A profile image of the zenchat chat application user, David Hype ."
+            />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold">David Hype</h3>
+              <p className="text-sm font-">This is the last...</p>
             </div>
-        </aside>
-    </section>
-  )
-}
+          </div>
+          <div className="flex flex-col items-center justify-center gap-1">
+            <GoDotFill className="text-green-500 font-bold" />
+            <p className="font-light text-xs self-end">10:40 AM</p>
+          </div>
+        </div>
 
-export default UserSideBar
+        <div className="flex items-center justify-between transition px-2 cursor-pointer py-2 border-b hover:bg-slate-200">
+          <div className="flex items-center gap-1">
+            <Image
+              className="rounded-full h-14 w-14"
+              src={unknownUser}
+              alt="A profile image of the zenchat chat application user, David Hype ."
+            />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold">David Hype</h3>
+              <p className="text-sm font-">This is the last...</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-1">
+            <GoDotFill className="text-green-500 font-bold" />
+            <p className="font-light text-xs self-end">10:40 AM</p>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between transition px-2 cursor-pointer py-2 border-b hover:bg-slate-200">
+          <div className="flex items-center gap-1">
+            <Image
+              className="rounded-full h-14 w-14"
+              src={unknownUser}
+              alt="A profile image of the zenchat chat application user, David Hype ."
+            />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold">David Hype</h3>
+              <p className="text-sm font-">This is the last...</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-1">
+            <GoDotFill className="text-green-500 font-bold" />
+            <p className="font-light text-xs self-end">10:40 AM</p>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between transition px-2 cursor-pointer py-2 border-b hover:bg-slate-200">
+          <div className="flex items-center gap-1">
+            <Image
+              className="rounded-full h-14 w-14"
+              src={unknownUser}
+              alt="A profile image of the zenchat chat application user, David Hype ."
+            />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold">David Hype</h3>
+              <p className="text-sm font-">This is the last...</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-1">
+            <GoDotFill className="text-green-500 font-bold" />
+            <p className="font-light text-xs self-end">10:40 AM</p>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between transition px-2 cursor-pointer py-2 border-b hover:bg-slate-200">
+          <div className="flex items-center gap-1">
+            <Image
+              className="rounded-full h-14 w-14"
+              src={unknownUser}
+              alt="A profile image of the zenchat chat application user, David Hype ."
+            />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold">David Hype</h3>
+              <p className="text-sm font-">This is the last...</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-1">
+            <GoDotFill className="text-green-500 font-bold" />
+            <p className="font-light text-xs self-end">10:40 AM</p>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between transition px-2 cursor-pointer py-2 border-b hover:bg-slate-200">
+          <div className="flex items-center gap-1">
+            <Image
+              className="rounded-full h-14 w-14"
+              src={unknownUser}
+              alt="A profile image of the zenchat chat application user, David Hype ."
+            />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold">David Hype</h3>
+              <p className="text-sm font-">This is the last...</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-1">
+            <GoDotFill className="text-green-500 font-bold" />
+            <p className="font-light text-xs self-end">10:40 AM</p>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between transition px-2 cursor-pointer py-2 border-b hover:bg-slate-200">
+          <div className="flex items-center gap-1">
+            <Image
+              className="rounded-full h-14 w-14"
+              src={unknownUser}
+              alt="A profile image of the zenchat chat application user, David Hype ."
+            />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold">David Hype</h3>
+              <p className="text-sm font-">This is the last...</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-1">
+            <GoDotFill className="text-green-500 font-bold" />
+            <p className="font-light text-xs self-end">10:40 AM</p>
+          </div>
+        </div>
+
+
+
+      </aside>
+    </section>
+  );
+};
+
+export default UserSideBar;
